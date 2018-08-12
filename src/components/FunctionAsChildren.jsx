@@ -9,17 +9,19 @@
  */
 
 import React from 'react'
+import type { Node } from 'react'
 
 type Props = {
-  children: Function
+  children: Function,
+  name: string
 }
 
-export default (props: Props) => {
+export default ({ children, name }: Props) => {
+  const renderedChildren: Node = children({ name })
+
   return (
     <div className='function-as-children'>
-      {props.children({
-        ...props
-      })}
+      {renderedChildren}
     </div>
   )
 }
