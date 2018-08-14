@@ -8,8 +8,25 @@ import registerServiceWorker from './registerServiceWorker'
 
 const rootNode = document.getElementById('root')
 
+addToHead(robotoFontLink())
+
 if (rootNode) {
   ReactDOM.render(<App />, rootNode)
 }
 
 registerServiceWorker()
+
+function addToHead (element: HTMLLinkElement): void {
+  const head = document.querySelector('head')
+
+  if (head) head.appendChild(element)
+}
+
+function robotoFontLink () {
+  const fontLink = document.createElement('link')
+
+  fontLink.rel = 'stylesheet'
+  fontLink.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500'
+
+  return fontLink
+}
