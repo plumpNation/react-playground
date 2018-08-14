@@ -3,7 +3,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
+
+// import App from './App'
+import GridLayout from './GridLayout'
+
 import registerServiceWorker from './registerServiceWorker'
 
 const rootNode = document.getElementById('root')
@@ -11,7 +14,7 @@ const rootNode = document.getElementById('root')
 addToHead(robotoFontLink())
 
 if (rootNode) {
-  ReactDOM.render(<App />, rootNode)
+  ReactDOM.render(<GridLayout />, rootNode)
 }
 
 registerServiceWorker()

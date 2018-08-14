@@ -38,9 +38,25 @@ class App extends Component<AppProps, AppState> {
           {({name, onClick}) => <button onClick={onClick}>{name}</button>}
         </FunctionAsChildren>
 
-        <Flatpickr options={{locale: Norwegian}} data-enable-time
-          value={this.state.date}
-          onChange={date => { this.setState({ date }) }} />
+        <Flatpickr
+          options={{
+            locale: Norwegian,
+            // inline: true,
+            dateFormat: 'd-m-Y',
+            altFormat: 'd-m-Y',
+            altInput: true,
+            enableTime: false,
+            wrap: true
+          }}
+          onChange={date => { this.setState({ date }) }}
+        >
+          <input
+            className='wrapped-by-flatpickr'
+            type='text'
+            defaultValue={this.state.date}
+            data-input
+          />
+        </Flatpickr>
       </div>
     )
   }
