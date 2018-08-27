@@ -6,7 +6,8 @@ import './index.css'
 
 // import App from './App'
 // import GridLayout from './GridLayout'
-import Drawer from './Drawer'
+// import Drawer from './Drawer'
+import Recompose from './Recompose'
 
 import registerServiceWorker from './registerServiceWorker'
 
@@ -15,7 +16,7 @@ const rootNode = document.getElementById('root')
 addToHead(robotoFontLink())
 
 if (rootNode) {
-  ReactDOM.render(<Drawer />, rootNode)
+  ReactDOM.render(<Recompose />, rootNode)
 }
 
 registerServiceWorker()
