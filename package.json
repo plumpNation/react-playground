@@ -28,6 +28,7 @@
     "@material-ui/core": "^1.5.0",
     "@material-ui/icons": "^2.0.2",
     "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "flow": "^0.2.3",
     "flow-bin": "^0.79.1",

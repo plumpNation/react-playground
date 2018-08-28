@@ -2,6 +2,5 @@
     "standard.autoFixOnSave": true,
     "javascript.validate.enable": false,
     "editor.tabSize": 2,
-    "eslint.enable": false,
     "flow.useNPMPackagedFlow": true
 }
